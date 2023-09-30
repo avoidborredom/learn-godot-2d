@@ -204,7 +204,7 @@ metadata/_edit_lock_ = true
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_1kbb0")
 animation = &"fly"
-frame_progress = 0.353623
+frame_progress = 0.887246
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 10)

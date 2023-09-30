@@ -1,7 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://bepabncakby6r"]
+[gd_scene load_steps=18 format=3 uid="uid://bepabncakby6r"]
 
 [ext_resource type="Script" path="res://src/entities/player/Player.gd" id="1_rn2x2"]
 [ext_resource type="Texture2D" uid="uid://0fq0hed126ue" path="res://art/slime_monster_spritesheet.png" id="2_0cm5r"]
+[ext_resource type="Texture2D" uid="uid://dp44lo2uov2ju" path="res://art/slime_monster_spritesheet copy.png" id="2_l3jxk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk0td"]
+atlas = ExtResource("2_l3jxk")
+region = Rect2(0, 72, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbuhj"]
+atlas = ExtResource("2_l3jxk")
+region = Rect2(24, 72, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a13rg"]
+atlas = ExtResource("2_l3jxk")
+region = Rect2(48, 72, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1dccr"]
 atlas = ExtResource("2_0cm5r")
@@ -41,6 +54,20 @@ region = Rect2(48, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fteo3"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk0td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbuhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a13rg")
+}],
+"loop": false,
+"name": &"death",
+"speed": 3.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1dccr")
@@ -94,8 +121,9 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fteo3")
-animation = &"walk"
-frame_progress = 0.506944
+animation = &"death"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
