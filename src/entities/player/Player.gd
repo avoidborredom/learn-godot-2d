@@ -2,7 +2,7 @@ extends Area2D
 
 signal hit
 
-@export var speed = 100 # How fast the player will move (pixels/sec).
+@export var speed = 200 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 var target = position
 

@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dukhnbngekvde"]
+[gd_scene load_steps=7 format=3 uid="uid://dukhnbngekvde"]
 
 [ext_resource type="Script" path="res://src/scenes/hud.gd" id="1_6tduc"]
-[ext_resource type="FontFile" uid="uid://cgj1ccy0b66kd" path="res://fonts/Xolonium-Regular.ttf" id="1_tfkp5"]
+[ext_resource type="FontFile" uid="uid://153cdock5ih8" path="res://fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="2_nqiw2"]
+[ext_resource type="FontFile" uid="uid://dva2mamnmreak" path="res://fonts/Pixelify_Sans/static/PixelifySans-Regular.ttf" id="3_vjo4p"]
+
+[sub_resource type="Theme" id="Theme_y8dv0"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_inyib"]
 action = &"start"
@@ -21,8 +24,8 @@ offset_left = -67.5
 offset_right = 67.5
 offset_bottom = 81.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_tfkp5")
-theme_override_font_sizes/font_size = 64
+theme_override_fonts/font = ExtResource("2_nqiw2")
+theme_override_font_sizes/font_size = 48
 text = "0
 "
 horizontal_alignment = 1
@@ -33,17 +36,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -118.5
-offset_top = -40.5
-offset_right = 118.5
-offset_bottom = 40.5
+offset_left = -186.5
+offset_top = -120.0
+offset_right = 186.5
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_tfkp5")
+theme_override_fonts/font = ExtResource("2_nqiw2")
 theme_override_font_sizes/font_size = 64
-text = "Dodge!"
+text = "Don't let Pepe touch you!"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="StartButton" type="Button" parent="."]
 anchors_preset = 7
@@ -57,7 +61,8 @@ offset_right = 130.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("1_tfkp5")
+theme = SubResource("Theme_y8dv0")
+theme_override_fonts/font = ExtResource("3_vjo4p")
 theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_wbhke")
 text = "START"
