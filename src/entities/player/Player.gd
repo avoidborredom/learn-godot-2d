@@ -2,7 +2,7 @@ extends Area2D
 
 signal hit
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
+@export var speed = 100 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 var target = position
 
@@ -43,7 +43,7 @@ func _process(delta):
 		# See the note below about boolean assignment.
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	elif velocity.y != 0:
-		$AnimatedSprite2D.animation = "up"
+		$AnimatedSprite2D.animation = "down"
 		$AnimatedSprite2D.flip_v = velocity.y > 0
 
 

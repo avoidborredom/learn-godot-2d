@@ -30,5 +30,10 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 func bounce_mob_back():
 	if position.x < 0 || position.x >= screen_right:
 		linear_velocity.x *= -1
+		$AnimatedSprite2D.flip_h = !$AnimatedSprite2D.flip_h
 	if position.y < 0 || position.y >= screen_bottom:
 		linear_velocity.y *= -1
+		$AnimatedSprite2D.flip_v = !$AnimatedSprite2D.flip_v
+	
+		
+		
