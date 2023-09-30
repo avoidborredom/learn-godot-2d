@@ -25,7 +25,6 @@ func _process(delta):
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 	if Input.is_action_pressed("mouse_click"):
-		print_debug("test")
 		target = get_global_mouse_position()
 		velocity = position.direction_to(target) * speed
 
