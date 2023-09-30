@@ -4,6 +4,7 @@ signal hit
 
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
+var target = position
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +15,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
+	
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
 	if Input.is_action_pressed("left"):
@@ -22,6 +24,10 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
+	if Input.is_action_pressed("mouse_click"):
+		print_debug("test")
+		target = get_global_mouse_position()
+		velocity = position.direction_to(target) * speed
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -52,3 +58,4 @@ func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+	
