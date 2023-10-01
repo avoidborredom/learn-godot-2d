@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpbua4jngboot"
+path="res://.godot/imported/Rock - 16 bit super fast tempo for games.mp3-31d082dd7dc31fa9dabe79ecb8c5fb73.mp3str"
+
+[deps]
+
+source_file="res://art/Rock - 16 bit super fast tempo for games.mp3"
+dest_files=["res://.godot/imported/Rock - 16 bit super fast tempo for games.mp3-31d082dd7dc31fa9dabe79ecb8c5fb73.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

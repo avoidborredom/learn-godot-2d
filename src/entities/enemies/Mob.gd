@@ -9,6 +9,7 @@ var screen_top
 var screen_bottom
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	var mob_types = $AnimatedSprite2D.sprite_frames.get_animation_names() # This returns an Array containing all three animation names: ["walk", "swim", "fly"].
 	$AnimatedSprite2D.play(mob_types[randi() % mob_types.size()])
 	
@@ -17,6 +18,10 @@ func _ready():
 	screen_right = screen_size.x - margin
 	screen_top = margin
 	screen_bottom = screen_size.y - margin
+	
+	await get_tree().create_timer(0.5).timeout
+	$Voice.play()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

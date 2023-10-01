@@ -15,7 +15,7 @@ run/main_scene="res://src/scenes/main.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0.611765, 0.72549, 0.74902, 1)
 boot_splash/image="res://art/pepesplash.png"
-config/icon="res://icon.svg"
+config/icon="res://art/craiyon_192324_pepe_touching_slime.png"
 
 [display]
 

@@ -5,6 +5,7 @@ var score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$StartingMusic.play()
 	pass
 
 
@@ -21,10 +22,14 @@ func game_over():
 	$MobTimer.stop()
 	
 	$HUD.show_game_over()
+	
+	await get_tree().create_timer(2.0).timeout
+	$StartingMusic.play()
 
 func new_game():
 	score = 0
 	
+	$StartingMusic.stop()
 	$Music.play()
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
